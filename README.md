@@ -2,6 +2,7 @@
 An _(almost)_ undetectable autoclicker and speedbridge bot for minecraft
 
 _I am **NOT** responsible for any bad incidents in public servers due to using this program_
+
 _Use it at your own risk_
 
 
