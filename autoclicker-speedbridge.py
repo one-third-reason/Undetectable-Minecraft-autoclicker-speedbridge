@@ -6,6 +6,9 @@ from pynput.mouse import Controller as mc
 from pynput.keyboard import Key, GlobalHotKeys
 from pynput.keyboard import Controller as kc
 
+clickKey = "q"  # Key to activate autoclicker
+bridgeKey = "v" # Key to activate speedbridge bot
+
 class Click(threading.Thread):
 	def __init__(self):
 		super(Click, self).__init__()
@@ -15,7 +18,7 @@ class Click(threading.Thread):
 		while True:
 			while self.running:
 				mouse.click(Button.left)
-				time.sleep(random.uniform(0.01,0.15))
+				time.sleep(random.uniform(0.01,0.15)) # interval between clicks are 0.01 until 0.15 seconds
 			time.sleep(0.1)
 
 class Bridge(threading.Thread):
@@ -31,7 +34,7 @@ class Bridge(threading.Thread):
 				time.sleep(0.25)
 				keyboard.release('s')
 				mouse.click(Button.right)
-				time.sleep(random.uniform(0.01, 0.1))
+				time.sleep(random.uniform(0.01, 0.1)) # interval between placing block and uncrouching are 0.01 until 0.1 seconds
 				keyboard.release(Key.ctrl)
 				keyboard.press('s')
 				time.sleep(0.2)
@@ -61,7 +64,7 @@ def activateBridge():
 		bridgeFunc.running = True
 
 with GlobalHotKeys({
-	'q' : activateClick,
-	'v' : activateBridge,
+	clickKey : activateClick,
+	bridgeKey : activateBridge,
 	}) as i:
 	i.join()
