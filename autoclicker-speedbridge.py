@@ -29,13 +29,13 @@ class Bridge(threading.Thread):
 	def run(self):
 		while True:
 			while self.running:
-				keyboard.press(Key.ctrl)
+				keyboard.press(Key.shift)
 				keyboard.press('s')
 				time.sleep(0.25)
 				keyboard.release('s')
 				mouse.click(Button.right)
 				time.sleep(random.uniform(0.01, 0.1)) # interval between placing block and uncrouching are 0.01 until 0.1 seconds
-				keyboard.release(Key.ctrl)
+				keyboard.release(Key.shift)
 				keyboard.press('s')
 				time.sleep(0.2)
 				keyboard.release('s')
