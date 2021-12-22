@@ -1,5 +1,5 @@
-# Minecraft-autoclicker-speedbridge
-An _(almost)_ undetectable autoclicker and speedbridge bot for minecraft
+# Minecraft Autoclicker and Speedbridge bot
+A simple and _(almost)_ undetectable autoclicker and speedbridge bot for minecraft
 
 _I am **NOT** responsible for any bad incidents in public servers due to using this program_
 
