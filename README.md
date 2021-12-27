@@ -18,6 +18,6 @@ The current keybind is:
 
 _"Q"_ to activate autclicker
 
-_"V"_ to activate speedbridge bot
+_"Z"_ to activate speedbridge bot
 
 You may change those in the code later on
