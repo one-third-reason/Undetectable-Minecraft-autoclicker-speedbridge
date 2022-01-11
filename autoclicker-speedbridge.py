@@ -6,20 +6,21 @@ from pynput.mouse import Controller as mc
 from pynput.keyboard import Key, GlobalHotKeys
 from pynput.keyboard import Controller as kc
 
-clickKey = "q"  # Key to activate autoclicker
-bridgeKey = "z" # Key to activate speedbridge bot
+leftClickKey = "q"  # Key to activate autoclicker (left key)
+rightClickKey = "x" # Key to activate autoclicker (right key)
+bridgeKey = "z"     # Key to activate speedbridge bot
 
 class Click(threading.Thread):
 	def __init__(self):
 		super(Click, self).__init__()
-		self.running = False
+		self.mode = None
 
 	def run(self):
 		while True:
-			while self.running:
-				mouse.click(Button.left)
-				time.sleep(random.uniform(0.01,0.15)) # interval between clicks are 0.01 until 0.15 seconds
-			time.sleep(0.1)
+			while self.mode:
+				mouse.click(self.mode)
+				time.sleep(random.uniform(0.001,0.09)) # interval between clicks are 0.01 until 0.15 seconds
+			time.sleep(0.001)
 
 class Bridge(threading.Thread):
 	def __init__(self):
@@ -31,40 +32,35 @@ class Bridge(threading.Thread):
 			while self.running:
 				keyboard.press(Key.shift)
 				keyboard.press('s')
-				time.sleep(0.3)
+				time.sleep(0.2)
 				keyboard.release('s')
 				mouse.click(Button.right)
-				time.sleep(random.uniform(0.01, 0.1)) # interval between placing block and uncrouching are 0.01 until 0.1 seconds, which is pretty useless
+				time.sleep(0.01)
 				keyboard.release(Key.shift)
 				keyboard.press('s')
 				time.sleep(0.18)
 				keyboard.release('s')
-			time.sleep(0.1)
+			time.sleep(0.001)
 
 mouse = mc()
 keyboard = kc()
-clickFunc = Click()
-bridgeFunc = Bridge()
-clickFunc.start()
-bridgeFunc.start()
+clickC = Click()
+bridgeC = Bridge()
+clickC.start()
+bridgeC.start()
 
-def activateClick():
-	print("clicked")
-	if clickFunc.running:
-		clickFunc.running = False
-	else:
-		clickFunc.running = True
+def activateLeftClick():
+	clickC.mode = Button.left if clickC.mode != Button.left else None
+
+def activateRightClick():
+	clickC.mode = Button.right if clickC.mode != Button.right else None
 
 def activateBridge():
-	print("bridged")
-	if bridgeFunc.running:
-		bridgeFunc.running = False
-	else:
-		time.sleep(0.2)
-		bridgeFunc.running = True
+	bridgeC.running = not bridgeC.running
 
 with GlobalHotKeys({
-	clickKey : activateClick,
-	bridgeKey : activateBridge,
+	leftClickKey : activateLeftClick,
+	rightClickKey : activateRightClick,
+	bridgeKey : activateBridge
 	}) as i:
 	i.join()
