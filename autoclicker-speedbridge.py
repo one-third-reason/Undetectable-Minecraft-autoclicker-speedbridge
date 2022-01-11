@@ -6,8 +6,8 @@ from pynput.mouse import Controller as mc
 from pynput.keyboard import Key, GlobalHotKeys
 from pynput.keyboard import Controller as kc
 
-leftClickKey = "q"  # Key to activate autoclicker (left key)
-rightClickKey = "x" # Key to activate autoclicker (right key)
+leftClickKey = "q"  # Key to activate autoclicker (left button)
+rightClickKey = "x" # Key to activate autoclicker (right button)
 bridgeKey = "z"     # Key to activate speedbridge bot
 
 class Click(threading.Thread):
