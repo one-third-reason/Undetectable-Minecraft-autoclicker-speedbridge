@@ -8,7 +8,7 @@ from pynput.keyboard import Controller as kc
 
 leftClickKey = "q"  # Key to activate autoclicker (left button)
 rightClickKey = "x" # Key to activate autoclicker (right button)
-bridgeKey = "z"     # Key to activate speedbridge bot
+bridgeKey = "z"     # Key to activate speedbridge macro
 
 class Click(threading.Thread):
 	def __init__(self):
