@@ -1,5 +1,5 @@
 # Minecraft Autoclicker and Speedbridge bot
-A simple and _(almost)_ undetectable autoclicker and speedbridge bot for minecraft
+A simple and _(almost)_ undetectable autoclicker and speedbridge macro for minecraft
 
 _I am **NOT** responsible for any bad incidents in public servers due to using this program_
 
@@ -11,7 +11,7 @@ Python language is used here accompanied with the _pynput_ module (download it f
 
 The autoclicker is pretty undetectable by anticheats since it has a random interval between clicks, though is still possible to be detected
 
-The speedbridge bot, however, does not have any random intervals whatsoever, but come on no one's gonna suspect that it's ran by a bot right haha
+The speedbridge macro, however, does not have any random intervals whatsoever, but come on no one's gonna suspect that it's ran by a bot right haha
 
 # How to use
 The current keybind is:
@@ -20,6 +20,6 @@ The current keybind is:
 
 - _"X"_ to activate autoclicker (right button)
 
-- _"Z"_ to activate speedbridge bot
+- _"Z"_ to activate speedbridge macro
 
 You may change those in the code later on
