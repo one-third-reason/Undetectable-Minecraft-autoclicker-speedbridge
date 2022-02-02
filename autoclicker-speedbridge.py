@@ -19,7 +19,7 @@ class Click(threading.Thread):
 		while True:
 			while self.mode:
 				mouse.click(self.mode)
-				time.sleep(random.uniform(0.001,0.09)) # interval between clicks are 0.01 until 0.15 seconds
+				time.sleep(random.uniform(0.001,0.09)) # interval between clicks are 0.001 until 0.09 seconds, feel free to change them
 			time.sleep(0.001)
 
 class Bridge(threading.Thread):
