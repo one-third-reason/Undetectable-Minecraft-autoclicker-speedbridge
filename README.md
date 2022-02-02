@@ -13,7 +13,7 @@ The autoclicker is pretty undetectable by anticheats since it has a random inter
 
 The speedbridge macro, however, does not have any random intervals, but come on no one's gonna suspect that :trollface:
 
-# How to download
+# How to use
 
 Download the python <a href="https://github.com/XyeetD/Undetectable-Minecraft-autoclicker-speedbridge/blob/main/autoclicker-speedbridge.py">file</a>
 
