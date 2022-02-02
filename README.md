@@ -11,9 +11,18 @@ Python language is used here accompanied with the _pynput_ module (download it f
 
 The autoclicker is pretty undetectable by anticheats since it has a random interval between clicks, though is still possible to be detected
 
-The speedbridge macro, however, does not have any random intervals whatsoever, but come on no one's gonna suspect that it's ran by a bot right haha
+The speedbridge macro, however, does not have any random intervals, but come on no one's gonna suspect that :trollface:
 
-# How to use
+# How to download
+
+Download the python <a href="https://github.com/XyeetD/Undetectable-Minecraft-autoclicker-speedbridge/blob/main/autoclicker-speedbridge.py">file</a>
+
+Make sure you have <a href="https://www.python.org/">python</a> installed, and the <a href="https://pypi.org/project/pynput/">pynput</a> module installed
+
+The python file should be runnable, and it'll immediately start when you run it
+
+<br>
+
 The current keybind is:
 
 - _"Q"_ to activate autoclicker (left button)
